@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="topic_text">Заполните форму ниже:</h1>
+    <form action="#" name="form" id="form" novalidate>
+        <div class="input_box">
+            <input type="text" name="name" id="name" placeholder="Введите Ваше имя*" minlength="2" maxlength="40" data-reg="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required/>
+            <label for="name">Ваше имя</label>
+        </div>
+        <div class="input_box">
+            <input type="text" name="email" id="email" placeholder="Введите Ваш email*" data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" required/>
+            <label for="email">В формате: mail@mail.com</label>
+        </div>
+        <div class="input_box">
+            <input type="number" name="number" id="number" placeholder="Ваш возраст*" required/>
+        </div>
+        <div class="input_box">
+            <p><input type="radio" name="radio" id="radio" value="man"/>мужчина</p>
+            <p><input type="radio" name="radio" id="radio" value="woman"/>женщина</p>
+        </div>
+        <div class="input_box">
+            <p>Укажите Вашу профессию*</p>
+            <select name="select" placeholder="Профессия" required>
+                <option value="it-genius">Программист</option>
+                <option value="doctor">Врач</option>
+                <option value="teacher">Учитель</option>
+                <option value="designer">Дизайнер</option>
+                <option value="shop_assistant">Продавец</option>
+                <option value="engineer">Инженер</option>
+                <option value="other">Другое</option>
+            </select>
+        </div>
+        <div class="input_box">
+            <input type="text" name="password" id="password" placeholder="Введите Ваш пароль*" minlength="8" pattern="/((?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,20})/" required/>
+        </div>
+        <div class="input_box">
+            <input type="text" name="repeat_password" id="repeat_password" placeholder="Введите пароль еще раз*" minlength="8" pattern="/((?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,20})/" required/>
+        </div>
+        <div class="input_box">
+            <p><input type="checkbox" name="checkbox" id="checkbox" value="agree" required/>Я согласен с обработкой моих персональных данных</p>
+        </div>
+        <div>
+            <input type="submit" name="button" id="button"/>
+        </div>
+
+
+    </form>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
